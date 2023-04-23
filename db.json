@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "image": "iph13.jpg",
+      "name": "Смартфон iPhone 14 Plus Blue 256GB",
+      "price": 539990,
+      "article": "T1",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
+      "image": "tv1.jpg",
+      "name": "Телевизор 50 LG 50NANO806QA",
+      "price": 369990,
+      "article": "T2",
+      "available": true,
+      "category": "Женские"
+    },
+    {
+      "image": "byt1.jpg",
+      "name": "Увлажнитель воздуха Dyson PH04",
+      "price": 549990,
+      "article": "T3",
+      "available": false,
+      "category": "Женские"
+    },
+    {
+      "image": "sams1.jpg",
+      "name": "Смартфон Samsung Galaxy Z Fold4",
+      "price": 1099990,
+      "article": "T4",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
+      "image": "col1.jpg",
+      "name": "Акустическая система Яндекс 2",
+      "price": 99990,
+      "article": "T5",
+      "available": false,
+      "category": "Женские"
+    },
+    {
+      "image": "shu1.jpg",
+      "name": "Дрель-шуруповерт аккумуляторная ",
+      "price": 24390,
+      "article": "T6",
+      "available": true,
+      "category": "Женские"
+    },
+    {
+      "image": "iphpro.jpg",
+      "name": "Смартфон iPhone 14 Pro 256GB Gold",
+      "price": 649990,
+      "article": "T7",
+      "available": true,
+      "category": "Женские"
+    },
+    {
+      "image": "sm1.jpg",
+      "name": "Смарт часы Apple Watch Series 8",
+      "price": 267990,
+      "article": "T8",
+      "available": true,
+      "category": "Женские"
+    }
+  ]
+}
