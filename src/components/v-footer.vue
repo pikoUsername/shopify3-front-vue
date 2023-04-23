@@ -1,7 +1,6 @@
 <script>
 export default { 
     name: "v-footer", 
-    data: {}
 }
 </script>
 

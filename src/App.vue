@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div>
     <vNav />
     <router-view></router-view>
-    <!-- <vMainpage/> --> 
+    <!-- <vMainpage/>  -->
     <vFooter/> 
   </div>
 </template>

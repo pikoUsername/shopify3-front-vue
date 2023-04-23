@@ -1,20 +1,36 @@
-import VueRouter from 'vue-router'; 
+import { createRouter } from 'vue-router'; 
 
-import index from "src/pages/main/index.vue"; 
+import MainPage from "../pages/MainPage.vue"
+import UserCart from "../pages/UserCart.vue"
+import ShowAllProducts from "../pages/ShowAllProducts.vue"
 
-import App from '../App.vue'; 
+const Example = {
+    template: "<div>Something</div>"
+}
 
-export const router = new VueRouter([{
-    path: '/', 
-    component: App, 
-    children: [ 
-        { 
-            path: '', 
-            redirect: '/home', 
-        }, 
-        {   
-            path: '/home', 
-            component: Home, 
-        }
-    ]
-}])
+const routes = [ 
+    {
+        path: '/', 
+        name: 'index', 
+        component: Example, 
+    }, 
+    {   
+        path: '/home', 
+        name: 'home',
+        component: MainPage, 
+    }, 
+    { 
+        path: '/cart', 
+        name: 'cart', 
+        component: UserCart,  
+    }, 
+    {
+        path: '/products', 
+        name: 'products', 
+        component: ShowAllProducts
+    }
+]
+
+const router = createRouter(routes)
+
+export default router; 
