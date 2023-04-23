@@ -1,6 +1,7 @@
 <template>
   <div>
     <vNav />
+    <!-- <MainPage /> -->
     <router-view></router-view>
     <!-- <vMainpage/>  -->
     <vFooter/> 

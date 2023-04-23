@@ -1,21 +1,12 @@
-import { createRouter } from 'vue-router'; 
+import { createRouter, createWebHashHistory } from 'vue-router'; 
 
 import MainPage from "../pages/MainPage.vue"
 import UserCart from "../pages/UserCart.vue"
 import ShowAllProducts from "../pages/ShowAllProducts.vue"
 
-const Example = {
-    template: "<div>Something</div>"
-}
-
 const routes = [ 
-    {
-        path: '/', 
-        name: 'index', 
-        component: Example, 
-    }, 
     {   
-        path: '/home', 
+        path: '/', 
         name: 'home',
         component: MainPage, 
     }, 
@@ -31,6 +22,6 @@ const routes = [
     }
 ]
 
-const router = createRouter(routes)
+const router = createRouter({  history: createWebHashHistory(), routes })
 
 export default router; 

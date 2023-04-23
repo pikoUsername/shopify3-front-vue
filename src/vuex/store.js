@@ -32,7 +32,7 @@ const store = createStore({
   },
   actions: {
     GET_PRODUCT_FROM_API({ commit }) {
-      return axios('http://localhost:3000/products', {
+      return axios('http://localhost:8000/api/product/all', {
         method: 'GET'
       })
         .then((response) => {
