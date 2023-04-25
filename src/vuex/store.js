@@ -1,10 +1,13 @@
-import axios from 'axios';
+
 import { createStore } from 'vuex';
+import actions from './actions';
 
 const store = createStore({
   state: {
+    path: "", 
     products: [],
-    card:[]
+    card:[], 
+    currentProduct: null, 
   },
   mutations: {
     SET_PRODUCTS_TO_STATE: (state, products) => {
@@ -28,36 +31,22 @@ const store = createStore({
     },
     REMOVE_FROM_CARD: (state, index) =>{
         state.card.splice(index, 1)
+    }, 
+    SET_CURRENT_PRODUCT: (state, product) => {
+        state.currentProduct = product 
     }
   },
-  actions: {
-    GET_PRODUCT_FROM_API({ commit }) {
-      return axios('http://localhost:8000/api/product/all', {
-        method: 'GET'
-      })
-        .then((response) => {
-          commit('SET_PRODUCTS_TO_STATE', response.data);
-          return response.data;
-        })
-        .catch((error) => {
-            console.log(error);
-            return error;
-          });
-    },
-    ADD_TO_CARD({commit}, product){
-        commit('SET_CARD', product);
-    },
-    DELETE_FROM_CARD({commit}, index){
-        commit('REMOVE_FROM_CARD', index);
-    }
-  },
+  actions: actions,
   getters: {
     PRODUCTS(state) {
       return state.products;
     },
     CARD(state) {
         return state.card;
-      },
+    },
+    CURRENT_PRODUCT(state) { 
+      return state.currentProduct; 
+    }
   }
 });
  
